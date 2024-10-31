@@ -1,6 +1,5 @@
 # Intelligent-Q-A-Chatbot-Using-Local-RAG-agent-with-LLaMA3
-
-![RAG](https://github.com/user-attachments/assets/8a909e7f-31f6-4691-b579-889ccec6338e)
+![RAG](https://github.com/user-attachments/assets/61b1245b-b955-4fbb-99db-7d41cdd7f96b)
 
 # Project Description
 The Retrieval Augmented Generation (RAG) system leverages three advanced techniques to enhance the accuracy and relevance of generated answers:
