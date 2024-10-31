@@ -1,4 +1,6 @@
 # Intelligent-Q-A-Chatbot-Using-Local-RAG-agent-with-LLaMA3
+An advance question-answering system that combines local document retrieval, Elasticsearch , and web search capabilities using the LLaMA3.2 language model for accurate and contextual responses.
+
 ![RAG](https://github.com/user-attachments/assets/61b1245b-b955-4fbb-99db-7d41cdd7f96b)
 
 # Project Description
@@ -18,27 +20,27 @@ The Retrieval Augmented Generation (RAG) system leverages three advanced techniq
 # Example Usage
 
 ## Initial Screen
-The entry point of the system featuring a clean, intuitive interface where users can input their questions. The interface displays the system's current status, active routing mechanisms, and provides immediate feedback on query processing.
+The entry point of the system featuring a clean, intuitive interface where users can input their questions.
 
 ![Screenshot 2024-10-30 120133](https://github.com/user-attachments/assets/790f3451-79a9-41a7-9248-66f4380b5822)
 
 ## Vector Store Routing
-When a question is asked, the system first evaluates whether it can be answered using locally stored knowledge in the vector database. The process follows these steps:
+When a question is asked, the system first evaluates whether belong to  the locally stored knowledge in the vector database. The process follows these steps:
 
 1. Question Analysis: The input is embedded and compared against stored document vectors
 2. Relevance Matching: System identifies the most similar documents in the vector store
 3. Response Generation: LLaMA3 processes the retrieved context to generate an answer
 4. Quality Check: Response undergoes verification for accuracy and relevance
 
-If the confidence score falls below the threshold, the system automatically triggers the fallback mechanism.
+If the confidence score falls below the threshold, the system automatically triggers the fallback mechanism to web-search.
 
 ![Screenshot 2024-10-30 125238](https://github.com/user-attachments/assets/4575c01d-5405-4828-b7ce-a5a68ac81e88)
 
 ## ElasticSearch Routing
-Integration with Elasticsearch for specialized queries, particularly focused on network management system data. This routing path is activated when questions pertain to system-specific information.
+Integration with Elasticsearch (Network Management System) for specialized queries, particularly focused on network management system data. This routing path is activated when questions pertain to system-specific information.
 
 ### Query Device Status from Elasticsearch (Network Management System)
-Provides real-time device status information by querying the Elasticsearch database. The system formats complex queries to retrieve current operational states, performance metrics, and health indicators of network devices.
+Provides real-time device status information by querying the Elasticsearch database. The system formats complex queries to retrieve current operational states, previous operational status, performance metrics, and health indicators of network devices.
 
 ![Screenshot 2024-10-30 132756](https://github.com/user-attachments/assets/8315fd47-b387-4453-b9d5-ef896cd65320)
 
@@ -56,7 +58,7 @@ The final fallback mechanism that activates when neither the vector store nor El
 
 1. Triggers web search using the Tavily API
 2. Filters and ranks search results for relevance
-3. Processes retrieved information through LLaMA3
+3. Processes retrieved information through LLaMA3.2
 4. Generates comprehensive responses based on current web data
 
 This ensures that even questions outside the local knowledge base receive accurate, up-to-date answers.
