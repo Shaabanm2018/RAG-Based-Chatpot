@@ -1,7 +1,21 @@
 # Intelligent-Q-A-Chatbot-Using-Local-RAG-agent-with-LLaMA3
-A sophisticated question-answering system that combines local document retrieval, Elasticsearch, and web search capabilities using the LLaMA3 language model for accurate and contextual responses.
-
 ![RAG](https://github.com/user-attachments/assets/61b1245b-b955-4fbb-99db-7d41cdd7f96b)
+
+# Project Description
+The Retrieval Augmented Generation (RAG) system leverages three advanced techniques to enhance the accuracy and relevance of generated answers:
+
+1- Routing: The system intelligently routes questions to either a vector store, Elasticsearch, or web search, depending on the content. If the question is related to the vector store, the query is directed there. If it pertains to Elasticsearch, the question is routed accordingly, otherwise, it falls back to web search.
+
+2- Fallback Mechanism: After the initial routing to the vector store, the retrieved documents are graded for relevance to the question. If they are deemed irrelevant, the system falls back to web search. If the query is directed to Elasticsearch, the search results are used without fallback.
+
+3- Sub-correction: Once an answer is generated, the system checks for hallucinations and evaluates if the response is relevant to the original question. If inaccuracies or irrelevance are detected, the system falls back to web search. This phase is bypassed when responses are generated from Elasticsearch.
+
+# Setup 
+- pip install langchain-nomic
+- ollama pull llama3.2:3b-instruct-fp16 
+- pip install -U langchain-nomic langchain_community tiktoken langchainhub chromadb langchain langgraph tavily-python
+
+# Example Usage
 
 ## Initial Screen
 The entry point of the system featuring a clean, intuitive interface where users can input their questions. The interface displays the system's current status, active routing mechanisms, and provides immediate feedback on query processing.
