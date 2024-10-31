@@ -46,8 +46,8 @@ Provides real-time device status information by querying the Elasticsearch datab
 
 ### Query Device Report from Elasticsearch (Network Management System)
 Generates comprehensive device reports by aggregating historical data and performance metrics from Elasticsearch. The system processes this data to create meaningful visualizations and trend analyses.
+![Screenshot 2024-10-30 125914](https://github.com/user-attachments/assets/e54b8b4c-a2e9-460a-9f3c-2ffdcf3c04fa)
 
-![Screenshot 2024-10-30 125914](https://github.com/user-attachments/assets/c9a884fb-4901-4bc3-91ce-56e9539ab7c9)
 
 Upon clicking on the Graph, a wider view will be displayed, offering detailed visual analytics and interactive data exploration capabilities.
 
